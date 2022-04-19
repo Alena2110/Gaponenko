@@ -17,11 +17,11 @@ public class Student {
         }
     }
 
-    public void SetPerformance(int[] performance) { //set-метод для performance
+    public void setPerformance(int[] performance) { //set-метод для performance
         System.arraycopy(performance, 0, this.performance, 0, 5);
     }
 
-    public void BestStudent() { //определение лучших студентов с оценками 9 и 10
+    public void bestStudent() { //определение лучших студентов с оценками 9 и 10
         int count = 0;
         for (int i = 0; i < 5; i++) {
             if (this.performance[i] >= 9) {
@@ -33,7 +33,7 @@ public class Student {
         }
     }
 
-    public void Print() { //вывод на экран
+    public void print() { //вывод на экран
         StringBuilder mark = new StringBuilder();
         for (int i = 0; i < 5; i++) {
             mark.append(this.performance[i]).append(" ");
@@ -52,15 +52,15 @@ public class Student {
         students[5] = new Student("Гулько Л.П", 3);
         students[6] = new Student("Кириллов Д.С", 1);
         students[7] = new Student("Горбылева Г.М", 2);
-        students[7].SetPerformance(new int[]{9, 9, 10, 10, 10});
+        students[7].setPerformance(new int[]{9, 9, 10, 10, 10});
         students[8] = new Student("Стасев Д.Н", 3);
         students[9] = new Student("Олешкевич Н.Н", 1);
         for (int i = 0; i < 10; i++) {//вывод информации по студентам на экран
-            students[i].Print();
+            students[i].print();
         }
         System.out.println("Лучшие студенты:");
         for (int i = 0; i < 10; i++) { //определение лучших студентов
-            students[i].BestStudent();
+            students[i].bestStudent();
         }
     }
 }

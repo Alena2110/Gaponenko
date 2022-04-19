@@ -27,7 +27,7 @@ public class Enumerator {
         }
     }
 
-    public void Increase() { //увеличение значения на единицу
+    public void increase() { //увеличение значения на единицу
         System.out.println("Увеличение текущего значения на единицу.");
         this.current++;
         if (this.current > this.max) {
@@ -37,7 +37,7 @@ public class Enumerator {
         }
     }
 
-    public void Decrease() { //уменьшение значения на единицу
+    public void decrease() { //уменьшение значения на единицу
         System.out.println("Уменьшение текущего значения на единицу.");
         this.current--;
         if (this.current < this.min) {
@@ -47,11 +47,11 @@ public class Enumerator {
         }
     }
 
-    public int GetCurrent() { //get-метод для current
+    public int getCurrent() { //get-метод для current
         return this.current;
     }
 
-    public void Print() { //вывод на экран
+    public void print() { //вывод на экран
         System.out.println("Минимальное значение: " + this.min + ". Максимальное значение: " + max +
                 ". Текущее значение: " + current);
     }
@@ -59,31 +59,31 @@ public class Enumerator {
     public static void main(String[] args) {
         System.out.println("Первый счетчик.");
         Enumerator enumeratorFirst = new Enumerator(500, 300, 1);
-        enumeratorFirst.Print();
-        enumeratorFirst.Decrease();
-        System.out.println("Текущее значение: " + enumeratorFirst.GetCurrent());
-        enumeratorFirst.Decrease();
-        System.out.println("Текущее значение: " + enumeratorFirst.GetCurrent());
-        enumeratorFirst.Increase();
-        System.out.println("Текущее значение: " + enumeratorFirst.GetCurrent());
+        enumeratorFirst.print();
+        enumeratorFirst.decrease();
+        System.out.println("Текущее значение: " + enumeratorFirst.getCurrent());
+        enumeratorFirst.decrease();
+        System.out.println("Текущее значение: " + enumeratorFirst.getCurrent());
+        enumeratorFirst.increase();
+        System.out.println("Текущее значение: " + enumeratorFirst.getCurrent());
         System.out.println("\nВторой счетчик.");
         Enumerator enumeratorSecond = new Enumerator(234, 1000, 700);
-        enumeratorSecond.Print();
-        enumeratorSecond.Decrease();
-        System.out.println("Текущее значение: " + enumeratorSecond.GetCurrent());
-        enumeratorSecond.Decrease();
-        System.out.println("Текущее значение: " + enumeratorSecond.GetCurrent());
-        enumeratorSecond.Increase();
-        System.out.println("Текущее значение: " + enumeratorSecond.GetCurrent());
+        enumeratorSecond.print();
+        enumeratorSecond.decrease();
+        System.out.println("Текущее значение: " + enumeratorSecond.getCurrent());
+        enumeratorSecond.decrease();
+        System.out.println("Текущее значение: " + enumeratorSecond.getCurrent());
+        enumeratorSecond.increase();
+        System.out.println("Текущее значение: " + enumeratorSecond.getCurrent());
         System.out.println("\nТретий счетчик.");
         Enumerator enumeratorThird = new Enumerator(100, 300, 299);
-        enumeratorThird.Print();
-        enumeratorThird.Increase();
-        System.out.println("Текущее значение: " + enumeratorThird.GetCurrent());
-        enumeratorThird.Increase();
-        System.out.println("Текущее значение: " + enumeratorThird.GetCurrent());
-        enumeratorThird.Decrease();
-        System.out.println("Текущее значение: " + enumeratorThird.GetCurrent());
+        enumeratorThird.print();
+        enumeratorThird.increase();
+        System.out.println("Текущее значение: " + enumeratorThird.getCurrent());
+        enumeratorThird.increase();
+        System.out.println("Текущее значение: " + enumeratorThird.getCurrent());
+        enumeratorThird.decrease();
+        System.out.println("Текущее значение: " + enumeratorThird.getCurrent());
     }
 }
 

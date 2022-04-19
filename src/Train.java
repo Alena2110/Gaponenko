@@ -16,7 +16,7 @@ public class Train {
         this.time = time;
     }
 
-    public static void SortingNumber(Train[] trains) {//сортировка массива элементов типа Train по номеру поезда
+    public static void sortingNumber(Train[] trains) {//сортировка массива элементов типа Train по номеру поезда
         Train temp;
         for (int i = 0; i < trains.length - 1; i++)
             for (int j = i; j < trains.length; j++) {
@@ -28,7 +28,7 @@ public class Train {
             }
     }
 
-    public static void SortingDestination(Train[] trains) {
+    public static void sortingDestination(Train[] trains) {
         //сортировка массива элементов типа Train по станции отправления (в случае равенства по времени отправления)
         Train temp;
         for (int i = 0; i < trains.length - 1; i++)
@@ -47,7 +47,7 @@ public class Train {
             }
     }
 
-    public void Print() { //вывод на экран
+    public void print() { //вывод на экран
         System.out.println("Станция назначения: " + this.destination + ". Номер поезда " + numberTrain +
                 ". Время отправления: " + time);
     }
@@ -63,17 +63,17 @@ public class Train {
         trains[4] = new Train("Гомель", 4, "00:15");
         System.out.println("Исходные данные:");
         for (Train train : trains) {
-            train.Print();
+            train.print();
         }
         System.out.println("\nСортировка по номеру поезда:");
-        Train.SortingNumber(trains);
+        Train.sortingNumber(trains);
         for (Train train : trains) {
-            train.Print();
+            train.print();
         }
         System.out.println("\nСортировка по станции назначения(в случае равенства по времени отправления):");
-        Train.SortingDestination(trains);
+        Train.sortingDestination(trains);
         for (Train train : trains) {
-            train.Print();
+            train.print();
         }
         do {
             System.out.println("\nВведите число от 1 до: " + trains.length + " для вывода данных о поезде");
@@ -83,6 +83,6 @@ public class Train {
             }
             number = scanner.nextInt();
         } while (number <= 0 || number > trains.length);
-        trains[number - 1].Print();
+        trains[number - 1].print();
     }
 }

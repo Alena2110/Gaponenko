@@ -10,31 +10,31 @@ public class Test1 { //класс Test 1 с двумя переменными
         this.b = b;
     }
 
-    public int Sum() { //сумма переменных
+    public int sum() { //сумма переменных
         return this.a + this.b;
     }
 
-    public void Change(int a, int b) { //изменение переменных
+    public void change(int a, int b) { //изменение переменных
         this.a = a;
         this.b = b;
     }
 
-    public int Max() { //поиск максимального значения
+    public int max() { //поиск максимального значения
         return Math.max(this.a, this.b);
     }
 
-    public void Print() {
+    public void print() {
         System.out.println("Переменная a: " + a + "\nПеременная b: " + b); //вывод переменных на экран
     }
 
     public static void main(String[] args) {
         Test1 test1 = new Test1(45, 55);
-        test1.Print();
-        System.out.println(test1.Sum());
-        System.out.println(test1.Max());
-        test1.Change(44, 55);
-        test1.Print();
-        System.out.println(test1.Sum());
-        System.out.println(test1.Max());
+        test1.print();
+        System.out.println(test1.sum());
+        System.out.println(test1.max());
+        test1.change(44, 55);
+        test1.print();
+        System.out.println(test1.sum());
+        System.out.println(test1.max());
     }
 }
