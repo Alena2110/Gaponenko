@@ -4,9 +4,9 @@ import java.util.Random;
  элементов). Создайте массив из десяти элементов такого типа. Добавьте возможность вывода фамилий и номеров групп
  студентов, имеющих оценки, равные только 9 или 10.*/
 public class Student {
-    String fullName; //ФИО
-    int numberGroup; //номер группы
-    int[] performance = new int[5]; //успеваемость
+    private String fullName; //ФИО
+    private int numberGroup; //номер группы
+    private int[] performance = new int[5]; //успеваемость
 
     Student(String fullName, int numberGroup) { //конструктор
         this.fullName = fullName;

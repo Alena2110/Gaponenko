@@ -1,7 +1,7 @@
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Task1 {
+public class Task {
     public static void main(String[] args) {
         String result;
         System.out.println("Линейные программы");

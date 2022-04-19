@@ -269,7 +269,7 @@ public class TaskArray {
     }
 
     public static boolean ArmstrongNumber(int number) { //определение является ли натуральное число числом Армстронга
-        String[] array = Task1.NumberComposition(number).split(" ");
+        String[] array = Task.NumberComposition(number).split(" ");
         int sumArmstrong = 0;
         for (String s : array) {
             sumArmstrong += Math.pow(Integer.parseInt(s), NumberCount(number));
@@ -279,7 +279,7 @@ public class TaskArray {
 
     public static boolean IncreasingSequence(int number) {
         //определение является ли состав натурального числа возрастающей последовательностью
-        String[] array = Task1.NumberComposition(number).split(" ");
+        String[] array = Task.NumberComposition(number).split(" ");
         for (int i = 0; i < array.length - 1; i++) {
             if (Integer.parseInt(array[i]) >= Integer.parseInt(array[i + 1])) {
                 return false;
@@ -291,7 +291,7 @@ public class TaskArray {
 
     public static boolean OddNumbers(int number) {
         //определение является ли состав натурального числа нечетным
-        String[] array = Task1.NumberComposition(number).split(" ");
+        String[] array = Task.NumberComposition(number).split(" ");
         for (String s : array) {
             if (Integer.parseInt(s) % 2 == 0) {
                 return false;
@@ -303,7 +303,7 @@ public class TaskArray {
     public static int CountEven(int number) {
         //определение количества четных цифр в натуральном числе
         int count = 0;
-        String[] array = Task1.NumberComposition(number).split(" ");
+        String[] array = Task.NumberComposition(number).split(" ");
         for (String s : array) {
             if (Integer.parseInt(s) % 2 == 0) {
                 count++;
@@ -1519,7 +1519,7 @@ public class TaskArray {
         элементами которого являются цифры числа N.*/
         if (N > 0) {
             //Получение строкового массива, элементы которого представляют собой цифра натурального числа N
-            String[] result = Task1.NumberComposition(N).split(" ");
+            String[] result = Task.NumberComposition(N).split(" ");
             return ("\n________________________________\n\n10. Дано натуральное число N. Написать метод(методы) для формирования " +
                     "\nмассива элементами которого являются цифры числа N." + "\n\nОтвет:\nИсходное число: "
                     + N + " \nМассив: " + Arrays.toString(result));
@@ -1536,9 +1536,9 @@ public class TaskArray {
             return ("\n________________________________\n\n11. Написать метод(методы), определяющий, в каком\n из данных " +
                     "двух чисел больше цифр." + "\n\nОтвет:\nN и M должны быть положительными.");
         } else {
-            String[] arrayN = Task1.NumberComposition(N).split(" ");
+            String[] arrayN = Task.NumberComposition(N).split(" ");
             //получение строкового массива, элементы которого представляют собой цифры натурального числа M
-            String[] arrayM = Task1.NumberComposition(M).split(" ");
+            String[] arrayM = Task.NumberComposition(M).split(" ");
             if (arrayN.length > arrayM.length) {
                 return ("\n________________________________\n\n11. Написать метод(методы), определяющий, в каком\nиз данных " +
                         "двух чисел больше цифр." + "\n\nОтвет:\nПервое число: " + N + "\nДлина первого числа: " + arrayN.length
