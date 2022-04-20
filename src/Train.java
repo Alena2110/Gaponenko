@@ -6,7 +6,7 @@ import java.util.Scanner;
  массив по пункту назначения, причем поезда с одинаковыми пунктами назначения должны быть упорядочены по времени отправления.
  */
 public class Train {
-    private final String destination; //пункт назначения
+    private String destination; //пункт назначения
     private int numberTrain;//номер поезда
     private String time;//время отправления поезда
 
