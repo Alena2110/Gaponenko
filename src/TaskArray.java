@@ -11,7 +11,7 @@ public class TaskArray {
         }
     }
 
-    public static StringBuilder ArrayOutputD(int N, int M, double[][] array) {
+    public static StringBuilder arrayOutputD(int N, int M, double[][] array) {
         //Вывод вещественной матрицы
         StringBuilder arrayOutput = new StringBuilder();
         for (int i = 0; i < N; i++) {
@@ -30,7 +30,7 @@ public class TaskArray {
         return arrayOutput;
     }
 
-    public static StringBuilder ArrayOutputI(int N, int M, int[][] array) {
+    public static StringBuilder arrayOutputI(int N, int M, int[][] array) {
         //Вывод целочисленной матрицы
         StringBuilder arrayOutput = new StringBuilder();
         for (int i = 0; i < N; i++) {
@@ -49,7 +49,7 @@ public class TaskArray {
         return arrayOutput;
     }
 
-    public static int[][] MagicSquare(int N) {
+    public static int[][] magicSquare(int N) {
         //Магический квадрат нечетного порядка
         int[][] array = new int[N][N];
         int count = 2; //переменная для чисел, которыми будет заполнен квадрат
@@ -77,12 +77,12 @@ public class TaskArray {
         return array;
     }
 
-    public static int[][] MagicSquare2(int N) {
+    public static int[][] magicSquare2(int N) {
         //Магический квадрат порядка одинарной четности (метод Чебракова)
         int[][] array = new int[N][N]; //итоговый магический квадрат
         int[][] arrayHelp; //квадрат нечетного порядка размера N/2
         int[][] arraySecondary = new int[N][N]; //вспомогательный квадрат
-        arrayHelp = MagicSquare(N / 2); //формирование магического квадрата нечетного порядка
+        arrayHelp = magicSquare(N / 2); //формирование магического квадрата нечетного порядка
         for (int i = 0; i < N / 2; i++)
             for (int j = 0; j < N / 2; j++) {
                 //заполнение каждой четверти итогового магического квадрата сформированным квадратом нечетного порядка
@@ -118,7 +118,7 @@ public class TaskArray {
         return array;
     }
 
-    public static int[][] MagicSquare24(int N) {
+    public static int[][] magicSquare24(int N) {
         //Магический квадрат порядка двойной четности
         int[][] array = new int[N][N];
         int number = 0;
@@ -146,7 +146,7 @@ public class TaskArray {
         return array;
     }
 
-    public static Integer BinarySearch(int[] array, int number, int first, int last) {
+    public static Integer binarySearch(int[] array, int number, int first, int last) {
         //двоичный поиск индекса для вставки элемента (сортировка вставками)
         int index = -1; //индекс для вставки искомого элемента
         if (number < array[0]) {
@@ -184,17 +184,17 @@ public class TaskArray {
         return a / GCD(a, b) * b;
     }
 
-    public static Double EquilateralTriangle(double a) {
+    public static Double equilateralTriangle(double a) {
         //поиск площади равностороннего треугольника
         return (a * a) / 4 * Math.pow(3, 0.5);
     }
 
-    public static double DistanceAB(int[] a, int[] b) {
+    public static double distanceAB(int[] a, int[] b) {
         //поиск расстояния между точками a и b
         return Math.pow(((b[0] - a[0]) * (b[0] - a[0]) + (b[1] - a[1]) * (b[1] - a[1])), 0.5);
     }
 
-    public static String SearchSecondMax(int[] array, int N) {
+    public static String searchSecondMax(int[] array, int N) {
         //поиск второго по величине элемента
         int maxFirst = Integer.MIN_VALUE; //максимальный элемент
         int maxSecond = Integer.MIN_VALUE; //второй по величине элемент
@@ -210,7 +210,7 @@ public class TaskArray {
         return ("\nМаксимальный элемент равен: " + maxFirst + "\nВторой по величине элемент равен: " + maxSecond);
     }
 
-    public static int Factorial(int number) {
+    public static int factorial(int number) {
         //поиск факториала числа number
         int factorial = 1;
         for (int i = 1; i <= number; i++) {
@@ -220,7 +220,7 @@ public class TaskArray {
     }
 
 
-    public static double SumArray(int k, int m, double[] array) {
+    public static double sumArray(int k, int m, double[] array) {
         //поиск суммы элементов массива с номерами от k до m
         double sum = 0; //сумма элементов массива с номерами от k до m
         for (int i = k - 1; i < m; i++)
@@ -228,19 +228,19 @@ public class TaskArray {
         return sum;
     }
 
-    public static double SquareRightTriangle(double x, double y) {
+    public static double squareRightTriangle(double x, double y) {
         //определение площади прямоугольного треугольника
         return x * y / 2;
     }
 
-    public static double SquareTriangle(double x, double y, double z) {
+    public static double squareTriangle(double x, double y, double z) {
         //определение площади треугольника
         double p;
         p = (x + y + z) / 2;//полупериметр треугольника
         return Math.pow((p * (p - x) * (p - y) * (p - z)), 0.5);
     }
 
-    public static int NumberSum(int number) { //определение суммы цифр натурального числа
+    public static int numberSum(int number) { //определение суммы цифр натурального числа
         int sum = 0;
         while (number > 0) {
             sum += number % 10;
@@ -249,7 +249,7 @@ public class TaskArray {
         return sum;
     }
 
-    public static int NumberCount(int number) { //определение количества цифр натурального числа
+    public static int numberCount(int number) { //определение количества цифр натурального числа
         int count = 0;
         while (number > 0) {
             count++;
@@ -258,7 +258,7 @@ public class TaskArray {
         return count;
     }
 
-    public static boolean PrimeNumber(int number) { //определение является ли число простым
+    public static boolean primeNumber(int number) { //определение является ли число простым
         int dividers = 0;//число делителей
         for (int i = 1; i <= number; i++) {
             if (number % i == 0) {
@@ -268,18 +268,18 @@ public class TaskArray {
         return dividers == 2;//если количество делителей равно 2, число является простым
     }
 
-    public static boolean ArmstrongNumber(int number) { //определение является ли натуральное число числом Армстронга
-        String[] array = Task.NumberComposition(number).split(" ");
+    public static boolean armstrongNumber(int number) { //определение является ли натуральное число числом Армстронга
+        String[] array = Task.numberComposition(number).split(" ");
         int sumArmstrong = 0;
         for (String s : array) {
-            sumArmstrong += Math.pow(Integer.parseInt(s), NumberCount(number));
+            sumArmstrong += Math.pow(Integer.parseInt(s), numberCount(number));
         }
         return sumArmstrong == number;
     }
 
-    public static boolean IncreasingSequence(int number) {
+    public static boolean increasingSequence(int number) {
         //определение является ли состав натурального числа возрастающей последовательностью
-        String[] array = Task.NumberComposition(number).split(" ");
+        String[] array = Task.numberComposition(number).split(" ");
         for (int i = 0; i < array.length - 1; i++) {
             if (Integer.parseInt(array[i]) >= Integer.parseInt(array[i + 1])) {
                 return false;
@@ -289,9 +289,9 @@ public class TaskArray {
     }
 
 
-    public static boolean OddNumbers(int number) {
+    public static boolean oddNumbers(int number) {
         //определение является ли состав натурального числа нечетным
-        String[] array = Task.NumberComposition(number).split(" ");
+        String[] array = Task.numberComposition(number).split(" ");
         for (String s : array) {
             if (Integer.parseInt(s) % 2 == 0) {
                 return false;
@@ -300,10 +300,10 @@ public class TaskArray {
         return true;
     }
 
-    public static int CountEven(int number) {
+    public static int countEven(int number) {
         //определение количества четных цифр в натуральном числе
         int count = 0;
-        String[] array = Task.NumberComposition(number).split(" ");
+        String[] array = Task.numberComposition(number).split(" ");
         for (String s : array) {
             if (Integer.parseInt(s) % 2 == 0) {
                 count++;
@@ -312,7 +312,7 @@ public class TaskArray {
         return count;
     }
 
-    public static String Array1_1(int N, int K) {
+    public static String array1_1(int N, int K) {
         //1. В массив A [N] занесены натуральные числа.
         //Найти сумму тех элементов, которые кратны данному K.
         int sum = 0;
@@ -329,7 +329,7 @@ public class TaskArray {
                 "\n\nСумма элементов, кратных К = " + sum);
     }
 
-    public static String Array1_2(int N, double Z) {
+    public static String array1_2(int N, double Z) {
         //2. Дана последовательность действительных чисел а1, а2, ..., аn.
         // Заменить все ее члены, большие данного Z, этим числом. Подсчитать количество замен.
         int count = 0; //количество замен
@@ -353,7 +353,7 @@ public class TaskArray {
                 "\nКоличество замен: " + count);
     }
 
-    public static String Array1_3(int N) {
+    public static String array1_3(int N) {
         //3. Дан массив действительных чисел, размерность которого N.
         // Подсчитать, сколько в нем отрицательных, положительных и нулевых элементов.
         int countPositive = 0; //положительные элементы
@@ -380,7 +380,7 @@ public class TaskArray {
                 "\nКоличество нулевых элементов: " + countZero);
     }
 
-    public static String Array1_4(int N) {
+    public static String array1_4(int N) {
         //4. Даны действительные числа а1, а2, ..., аn.
         //Поменять местами наибольший и наименьший элементы.
         double maxElem; //наибольший элемент
@@ -423,7 +423,7 @@ public class TaskArray {
                 "\n\nИсходный массив: " + arrayString + "\nИтоговый массив: " + arrayNew);
     }
 
-    public static String Array1_5(int N) {
+    public static String array1_5(int N) {
         //5. Даны целые числа а1 ,а2 ,..., аn . Вывести на печать только те числа, для которых ai > i.
         Random myRandom = new Random();
         StringBuilder arrayString = new StringBuilder(); //для записи исходного массива
@@ -442,7 +442,7 @@ public class TaskArray {
 
     }
 
-    public static String Array1_6(int N) {
+    public static String array1_6(int N) {
         //6. Задана последовательность N вещественных чисел. Вычислить сумму чисел, порядковые номера которых
         //являются простыми числами.
         StringBuilder arrayString = new StringBuilder(); //для записи исходного массива
@@ -472,7 +472,7 @@ public class TaskArray {
                 " определялась сумма: " + indexString + "\nСумма составила: " + Math.round(sum * 10.0) / 10.0);
     }
 
-    public static String Array1_7(int N) {
+    public static String array1_7(int N) {
         //7. Даны действительные числа a1, a2,...,an. Найти
         //max(a1+a2n,a2+a2n-1,...,an+an+1 ).
         if (N % 2 == 0) {
@@ -502,7 +502,7 @@ public class TaskArray {
 
     }
 
-    public static String Array1_8(int N) {
+    public static String array1_8(int N) {
         /*8. Дана последовательность целых чисел а1, а2, ..., аn.
         Образовать новую последовательность, выбросив из
         исходной те члены, которые равны min(a1, a2 , ... , an).*/
@@ -542,7 +542,7 @@ public class TaskArray {
                 "\nИсходный массив: " + arrayString + "\nИтоговый массив: " + arrayStringNew);
     }
 
-    public static String Array1_9(int N) {
+    public static String array1_9(int N) {
         /*9. В массиве целых чисел с количеством элементов n
         найти наиболее часто встречающееся число. Если таких
         чисел несколько, то определить наименьшее из них.*/
@@ -573,7 +573,7 @@ public class TaskArray {
                 "\nНаиболее часто встречающееся число: " + array[indexMax]);
     }
 
-    public static String Array1_10(int N) {
+    public static String array1_10(int N) {
         /*10. Дан целочисленный массив с количеством элементов п.
         Сжать массив, выбросив из него каждый второй
         элемент (освободившиеся элементы заполнить нулями).
@@ -600,7 +600,7 @@ public class TaskArray {
                 "\nИтоговый массив: " + arrayStringNew + "\n________________________________\n");
     }
 
-    public static String Array2_1(int N, int M) {
+    public static String array2_1(int N, int M) {
         //1. Дана матрица. Вывести на экран все нечетные столбцы,
         // у которых первый элемент больше последнего.
         Random myRandom = new Random();
@@ -628,10 +628,10 @@ public class TaskArray {
         }
         return ("\n________________________________\n\n1. Дана матрица. Вывести на экран все нечетные столбцы," +
                 "\nу которых первый элемент больше последнего. \nЧисло строк = " + N + "\nЧисло столбцов = " + M +
-                "\n\nОтвет: \n\nИсходный массив: " + ArrayOutputI(N, M, array) + "\n\nСтолбцы: " + arrayColumn);
+                "\n\nОтвет: \n\nИсходный массив: " + arrayOutputI(N, M, array) + "\n\nСтолбцы: " + arrayColumn);
     }
 
-    public static String Array2_2(int N) {
+    public static String array2_2(int N) {
         //2. Дана квадратная матрица. Вывести на экран элементы,
         // стоящие на диагонали.
         Random myRandom = new Random();
@@ -659,10 +659,10 @@ public class TaskArray {
         }
         return ("\n________________________________\n\n2. Дана квадратная матрица. Вывести на экран элементы," +
                 "\nстоящие на диагонали. \nЧисло строк = " + N + "\nЧисло столбцов = " + N +
-                "\n\nОтвет: \n\nИсходный массив: " + ArrayOutputI(N, N, array) + "\n\nДиагональ: " + arrayDiagonal);
+                "\n\nОтвет: \n\nИсходный массив: " + arrayOutputI(N, N, array) + "\n\nДиагональ: " + arrayDiagonal);
     }
 
-    public static String Array2_3(int N, int M) {
+    public static String array2_3(int N, int M) {
         //3. Дана матрица. Вывести k-ю строку и p-й столбец матрицы.
         Random myRandom = new Random();
         int k = myRandom.nextInt(N); //формирование случайного номера строки для вывода от 0 до количества строк
@@ -691,11 +691,11 @@ public class TaskArray {
         }
         return ("\n________________________________\n\n3. Дана матрица. Вывести k-ю строку и p-й столбец матрицы." +
                 "\nЧисло строк = " + N + "\nЧисло столбцов = " + M + "\nСтрока для вывода = " + (k + 1) +
-                "\nСтолбец для вывода = " + (p + 1) + "\n\nОтвет: \n\nИсходный массив: " + ArrayOutputI(N, M, array) +
+                "\nСтолбец для вывода = " + (p + 1) + "\n\nОтвет: \n\nИсходный массив: " + arrayOutputI(N, M, array) +
                 "\n\nСтолбец + строка: " + arrayRez);
     }
 
-    public static String Array2_4(int N) {
+    public static String array2_4(int N) {
         /*4. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
         (1,   2,  3, ...,n;
          n, n-1, n-2,...,1
@@ -718,7 +718,7 @@ public class TaskArray {
             return ("\n________________________________\n\n4. Сформировать квадратную матрицу порядка n \nпо заданному " +
                     "образцу(n - четное): \n(1,   2,  3, ...,n;\nn, n-1, n-2,...,1; \n(1,   2,  3, ...,n;" +
                     "\nn, n-1, n-2,...,1;\n...;\nn, n-1, n-2,...,1" + "\nN = " + N + "\n\nОтвет: \n\nМассив: " +
-                    ArrayOutputI(N, N, array));
+                    arrayOutputI(N, N, array));
         } else {
             return ("\n________________________________\n\n4. Сформировать квадратную матрицу порядка n \nпо заданному " +
                     "образцу(n - четное): \n(1,   2,  3, ...,n;\nn, n-1, n-2,...,1; \n(1,   2,  3, ...,n;" +
@@ -727,7 +727,7 @@ public class TaskArray {
         }
     }
 
-    public static String Array2_5(int N) {
+    public static String array2_5(int N) {
         /* 5. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
         (1   1   1 ... 1 1 1
          2   2   2 ... 2 2 0
@@ -749,7 +749,7 @@ public class TaskArray {
             return ("\n________________________________\n\n5. Сформировать квадратную матрицу порядка n \nпо заданному " +
                     "образцу(n - четное): \n(1   1   1 ... 1 1 1;\n2   2   2 ... 2 2 0; \n3   3   3 ... 3 0 0;" +
                     "\n...;\nn-1 n-1 0 ... 0 0 0;\nn   0   0 ... 0 0 0)" + "\nN = " + N + "\n\nОтвет: \n\nМассив: " +
-                    ArrayOutputI(N, N, array));
+                    arrayOutputI(N, N, array));
         } else {
             return ("\n________________________________\n\n5. Сформировать квадратную матрицу порядка n \nпо заданному " +
                     "образцу(n - четное): \n(1   1   1 ... 1 1 1;\n2   2   2 ... 2 2 0; \n3   3   3 ... 3 0 0;" +
@@ -758,7 +758,7 @@ public class TaskArray {
         }
     }
 
-    public static String Array2_6(int N) {
+    public static String array2_6(int N) {
         /* 6. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
         (1   1   1 ... 1 1 1
          0   1   1 ... 1 1 0
@@ -783,7 +783,7 @@ public class TaskArray {
             return ("\n________________________________\n\n5. Сформировать квадратную матрицу порядка n \nпо заданному " +
                     "образцу(n - четное): \n(1   1   1 ... 1 1 1;\n 0   1   1 ... 1 1 0; \n0   0   1 ... 1 0 0;" +
                     "\n...;\n0   1   1 ... 1 1 0;\n1   1   1 ... 1 1 1)" + "\nN = " + N + "\n\nОтвет: \n\nМассив: " +
-                    ArrayOutputI(N, N, array));
+                    arrayOutputI(N, N, array));
         } else {
             return ("\n________________________________\n\n5. Сформировать квадратную матрицу порядка n \nпо заданному " +
                     "образцу(n - четное): \n(1   1   1 ... 1 1 1;\n 0   1   1 ... 1 1 0; \n0   0   1 ... 1 0 0;" +
@@ -792,7 +792,7 @@ public class TaskArray {
         }
     }
 
-    public static String Array2_7(int N) {
+    public static String array2_7(int N) {
         /* 7. Сформировать квадратную матрицу порядка N по правилу:
         A(i,j)=sin((i*i-j*j)/N)
         и подсчитать количество положительных элементов в ней.*/
@@ -809,11 +809,11 @@ public class TaskArray {
         }
         return ("\n________________________________\n\n7. Сформировать квадратную матрицу порядка N по правилу:" +
                 "\nA(i,j)=sin((i*i-j*j)/N)" + "\nи подсчитать количество положительных элементов в ней." +
-                "\nN = " + N + "\n\nОтвет: \n\nМассив: " + ArrayOutputD(N, N, array) +
+                "\nN = " + N + "\n\nОтвет: \n\nМассив: " + arrayOutputD(N, N, array) +
                 "\nКоличество положительных элементов: " + countPositive);
     }
 
-    public static String Array2_8(int N, int M) {
+    public static String array2_8(int N, int M) {
         //8. В числовой матрице поменять местами два любых столбца.
         //Номера столбцов вводит пользователь с клавиатуры.
         Scanner scanner = new Scanner(System.in);
@@ -848,7 +848,7 @@ public class TaskArray {
                 array[i][j] = myRandom.nextInt(101); //заполнение матрицы случайными целыми числами от 0 до 100
             }
         }
-        arrayString = ArrayOutputI(N, M, array);
+        arrayString = arrayOutputI(N, M, array);
         //перемена выбранных столбцов местами
         for (int i = 0; i < N; i++) {
             change = array[i][oneCol - 1];
@@ -856,10 +856,10 @@ public class TaskArray {
             array[i][twoCol - 1] = change;
         }
         return ("\nЧисло строк = " + N + "\nЧисло столбцов = " + M + "\n\nОтвет: \n\nМассив: " + arrayString +
-                "\n\nИтоговый массив: " + ArrayOutputI(N, M, array));
+                "\n\nИтоговый массив: " + arrayOutputI(N, M, array));
     }
 
-    public static String Array2_9(int N, int M) {
+    public static String array2_9(int N, int M) {
         /*9. Задана матрица неотрицательных чисел.
         Посчитать сумму элементов в каждом столбце.
         Определить, какой столбец содержит максимальную сумму.*/
@@ -889,11 +889,11 @@ public class TaskArray {
         return ("\n________________________________\n\n9. Задана матрица неотрицательных чисел." +
                 "\nПосчитать сумму элементов в каждом столбце.\nОпределить, какой столбец содержит максимальную сумму." +
                 "\nЧисло строк = " + N + "\nЧисло столбцов = " + M + "\n\nОтвет: \n\nМассив: "
-                + ArrayOutputD(N, M, array) + "\n\nСумма по столбцам: " + sumColumn + "\n\nМаксимальная сумма: "
+                + arrayOutputD(N, M, array) + "\n\nСумма по столбцам: " + sumColumn + "\n\nМаксимальная сумма: "
                 + max + " в столбце " + colMax);
     }
 
-    public static String Array2_10(int N) {
+    public static String array2_10(int N) {
         //10. Найти положительные элементы главной
         // диагонали квадратной матрицы.
         Random myRandom = new Random();
@@ -921,11 +921,11 @@ public class TaskArray {
         }
         return ("\n________________________________\n\n10. Найти положительные элементы главной" +
                 "\nдиагонали квадратной матрицы. \nЧисло строк = " + N + "\nЧисло столбцов = " + N +
-                "\n\nОтвет: \n\nИсходный массив: " + ArrayOutputI(N, N, array) + "\n\nГлавная диагональ из положительных элементов:" +
+                "\n\nОтвет: \n\nИсходный массив: " + arrayOutputI(N, N, array) + "\n\nГлавная диагональ из положительных элементов:" +
                 arrayDiagonal);
     }
 
-    public static String Array2_11() {
+    public static String array2_11() {
         /*11. Матрицу 10x20 заполнить случайными числами от 0 до 15.
         Вывести на экран саму матрицу и номера строк,
         в которых число 5 встречается три и более раза.*/
@@ -948,11 +948,11 @@ public class TaskArray {
         }
         return ("\n________________________________\n\n11. Матрицу 10x20 заполнить случайными числами от 0 до 15." +
                 "\nВывести на экран саму матрицу и номера строк, \nв которых число 5 встречается три и более раз." +
-                "\n\nОтвет: \n\nИсходный массив: " + ArrayOutputI(10, 20, array) +
+                "\n\nОтвет: \n\nИсходный массив: " + arrayOutputI(10, 20, array) +
                 "\n\nНомера строк, в которых 5 повторяется 3 " + "и более раз:\n" + row);
     }
 
-    public static String Array2_12(int N, int M) {
+    public static String array2_12(int N, int M) {
         //12. Отсортировать строки матрицы по возрастанию
         // и убыванию значений элементов.
         Random myRandom = new Random();
@@ -964,7 +964,7 @@ public class TaskArray {
                 array[i][j] = myRandom.nextInt(101); //заполнение матрицы случайными целыми числами от 0 до 100
             }
         }
-        arrayString = ArrayOutputI(N, M, array);
+        arrayString = arrayOutputI(N, M, array);
         for (int i = 0; i < N; i++) {
             Arrays.sort(array[i]); //сортировка матрицы по возрастанию в строках
         }
@@ -976,10 +976,10 @@ public class TaskArray {
         return ("\n________________________________\n\n12. Отсортировать строки матрицы по возрастанию" +
                 "\n и убыванию значений элементов." + "\nЧисло строк = " + N + "\nЧисло столбцов = " + M +
                 "\n\nОтвет: \n\nИсходный массив: " + arrayString + "\n\nСортировка по строкам по возрастанию:" +
-                ArrayOutputI(N, M, array) + "\n\nСортировка по строкам по убыванию:" + ArrayOutputI(N, M, reverse));
+                arrayOutputI(N, M, array) + "\n\nСортировка по строкам по убыванию:" + arrayOutputI(N, M, reverse));
     }
 
-    public static String Array2_13(int N, int M) {
+    public static String array2_13(int N, int M) {
         //13. Отсортировать столбцы матрицы по возрастанию
         // и убыванию значений элементов.
         Random myRandom = new Random();
@@ -993,7 +993,7 @@ public class TaskArray {
                 array[i][j] = myRandom.nextInt(100);
             }
         }
-        arrayString = ArrayOutputI(N, M, array);
+        arrayString = arrayOutputI(N, M, array);
         //сортировка столбцов матрицы по возрастанию методом пузырька
         for (int j = 0; j < M; j++) {
             sorted = false;
@@ -1017,10 +1017,10 @@ public class TaskArray {
         return ("\n________________________________\n\n13. Отсортировать столбцы матрицы по возрастанию" +
                 "\n и убыванию значений элементов." + "\nЧисло строк = " + N + "\nЧисло столбцов = " + M +
                 "\n\nОтвет: \n\nИсходный массив: " + arrayString + "\n\nСортировка по столбцам по возрастанию:" +
-                ArrayOutputI(N, M, array) + "\n\nСортировка по столбцам по убыванию:" + ArrayOutputI(N, M, reverse));
+                arrayOutputI(N, M, array) + "\n\nСортировка по столбцам по убыванию:" + arrayOutputI(N, M, reverse));
     }
 
-    public static String Array2_14(int N, int M) {
+    public static String array2_14(int N, int M) {
         //14. Сформировать случайную матрицу m x n, состоящую из нулей и единиц, причем в каждом столбце число
         //единиц равно номеру столбца.
         if (N >= M) {
@@ -1045,7 +1045,7 @@ public class TaskArray {
                 count = 0;
                 list.clear();
             }
-            arrayString = ArrayOutputI(N, M, array);
+            arrayString = arrayOutputI(N, M, array);
             return ("\n________________________________\n\n14. Сформировать случайную матрицу m x n, \nсостоящую из нулей " +
                     "и единиц, причем в каждом столбце число \nединиц равно номеру столбца." +
                     "\nЧисло строк = " + N + "\nЧисло столбцов = " + M + "\n\nОтвет:" + arrayString);
@@ -1058,7 +1058,7 @@ public class TaskArray {
 
     }
 
-    public static String Array2_15(int N, int M) {
+    public static String array2_15(int N, int M) {
         //15. Найдите наибольший элемент матрицы и заменить
         // все нечетные элементы на него.
         Random myRandom = new Random();
@@ -1070,7 +1070,7 @@ public class TaskArray {
                 array[i][j] = myRandom.nextInt(101); //заполнение матрицы случайными целыми числами от 0 до 100
             }
         }
-        arrayString = ArrayOutputI(N, M, array);
+        arrayString = arrayOutputI(N, M, array);
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 max = Math.max(array[i][j], max); //поиск максимального элемента матрицы
@@ -1087,24 +1087,24 @@ public class TaskArray {
         return ("\n________________________________\n\n15. Найдите наибольший элемент матрицы и заменить" +
                 "\nвсе нечетные элементы на него." + "\nЧисло строк = " + N + "\nЧисло столбцов = " + M +
                 "\n\nОтвет: \n\nИсходный массив: " + arrayString + "\n\nМаксимальный элемент: " +
-                max + "\n\nИтоговый массив:" + ArrayOutputI(N, M, array));
+                max + "\n\nИтоговый массив:" + arrayOutputI(N, M, array));
     }
 
-    public static String Array2_16(int N) {
+    public static String array2_16(int N) {
         //16. Построить магический квадрат
         int[][] array;
         if (N % 4 == 0) {
-            array = MagicSquare24(N); //магический квадрат порядка двойной четности
+            array = magicSquare24(N); //магический квадрат порядка двойной четности
         } else if (N % 2 != 0) {
-            array = MagicSquare(N); //магический квадрат нечетного порядка
+            array = magicSquare(N); //магический квадрат нечетного порядка
         } else {
-            array = MagicSquare2(N); //магический квадрат порядка одинарной четности
+            array = magicSquare2(N); //магический квадрат порядка одинарной четности
         }
         return ("\n________________________________\n\n16. Построить магический квадрат" + "\nЧисло строк = " + N +
-                "\nЧисло столбцов = " + N + "\n\nМагический квадрат:" + ArrayOutputI(N, N, array));
+                "\nЧисло столбцов = " + N + "\n\nМагический квадрат:" + arrayOutputI(N, N, array));
     }
 
-    public static String Array3_1() {
+    public static String array3_1() {
         /*1. Заданы два одномерных массива с различным количеством элементов и натуральное число k. Объединить их в
         один массив, включив второй массив между k-м и (k+1) - м элементами первого, при этом не используя
         дополнительный массив.*/
@@ -1140,7 +1140,7 @@ public class TaskArray {
                 "\n________________________________\n");
     }
 
-    public static String Array3_2() {
+    public static String array3_2() {
         //2. Даны две последовательности a1 < a2 < ...< an и  b1 < b2 <...< bm. Образовать из них новую последовательность
         //чисел так, чтобы она тоже была неубывающей. Примечание. Дополнительный массив не использовать.
         Random myRandom = new Random();
@@ -1168,7 +1168,7 @@ public class TaskArray {
                 "\nОбъединенная последовательность: " + Arrays.toString(arrayUnion));
     }
 
-    public static String Array3_3() {
+    public static String array3_3() {
         /*3. Сортировка выбором. Дана последовательность чисел a1, a2, ... ,an.
         Требуется переставить элементы так, чтобы они были расположены по убыванию. Для этого в массиве, начиная с
         первого, выбирается наибольший элемент и ставится на первое место, а первый - на место наибольшего. Затем,
@@ -1204,7 +1204,7 @@ public class TaskArray {
                 "\nОтсортированная по убыванию последовательность: " + Arrays.toString(array));
     }
 
-    public static String Array3_4() {
+    public static String array3_4() {
         /*4. Сортировка обменами. Дана последовательность чисел n a1, a2, ... , an. Требуется переставить числа в
         порядке возрастания. Для этого сравниваются два соседних числа ai + ai+1. Если ai > ai+1, то делается
         перестановка. Так продолжается до тех пор, пока все элементы не станут расположены в порядке возрастания.
@@ -1241,7 +1241,7 @@ public class TaskArray {
                 + count);
     }
 
-    public static String Array3_5() {
+    public static String array3_5() {
         /*5. Сортировка вставками. Дана последовательность чисел  a1, a2, ... , an. Требуется переставить числа в порядке
         возрастания. Делается это следующим образом. Пусть  a1, a2, ... , ai - упорядоченная последовательность, т. е.
         a1 <= a2 <=, ... ,<= an.  Берется следующее число ai+1 и вставляется в последовательность так, чтобы новая
@@ -1261,7 +1261,7 @@ public class TaskArray {
         for (int i = 1; i < length; i++) {
             if (array[i] < array[i - 1]) {  //если элемент i не отсортирован
                 change = array[i]; //запись i-го элемента
-                index = BinarySearch(array, array[i], 0, i - 1); //поиск индекса для вставки элемента
+                index = binarySearch(array, array[i], 0, i - 1); //поиск индекса для вставки элемента
                 System.arraycopy(array, index, array, index + 1, i - index); //сдвиг элементов
                 array[index] = change; //запись i-го элемента в найденное место
             }
@@ -1272,7 +1272,7 @@ public class TaskArray {
                 "\nОтсортированная по возрастанию последовательность: " + Arrays.toString(array));
     }
 
-    public static String Array3_6(int N) {
+    public static String array3_6(int N) {
         /*6. Сортировка Шелла. Дан массив n действительных чисел. Требуется упорядочить его по возрастанию.
         Делается это следующим образом: сравниваются два соседних элемента ai и ai + 1. Если ai <= a1 + 1, то продвигаются
         на один элемент вперед. Если ai > ai+1, то производится перестановка и сдвигаются на один элемент назад.
@@ -1304,7 +1304,7 @@ public class TaskArray {
                 "\nИсходный массив " + arrayString + "\nОтсортированный по возрастанию массив " + Arrays.toString(array));
     }
 
-    public static String Array3_7() {
+    public static String array3_7() {
         /*7. Пусть даны две неубывающие последовательности действительных чисел a1 < a2 < ... < an и b1, b2, ... ,bm.
         Требуется указать те места, на которые нужно вставлять элементы последовательности b1, b2, ..., bm в первую
         последовательность так, чтобы новая последовательность оставалась возрастающей.*/
@@ -1348,7 +1348,7 @@ public class TaskArray {
                 lengthTwo + "\nПоследовательность b:\n" + Arrays.toString(arrayTwo) + result);
     }
 
-    public static String Array3_8(int N) {
+    public static String array3_8(int N) {
         /*6. Даны дроби p1/q1, p2/q2, ... ,pn/qn (pi, qi - натуральные). Составить программу, которая приводит эти дроби
         к общему знаменателю и упорядочивает их в порядке возрастания.*/
         Random myRandom = new Random();
@@ -1387,7 +1387,7 @@ public class TaskArray {
                 "\n________________________________\n");
     }
 
-    public static String Array4_1(int a, int b) {
+    public static String array4_1(int a, int b) {
         /*1. Написать метод(методы) для нахождения наибольшего общего делителя и наименьшего общего кратного двух
         натуральных чисел.*/
         return ("\n________________________________\n\n1. Написать метод(методы) для нахождения наибольшего общего делителя" +
@@ -1395,7 +1395,7 @@ public class TaskArray {
                 "\nНОД: " + GCD(a, b) + "\nНОK: " + LCM(a, b));
     }
 
-    public static String Array4_2(int a, int b, int c, int d) {
+    public static String array4_2(int a, int b, int c, int d) {
         /*2. Написать метод(методы) для нахождения наибольшего общего делителя четырех натуральных чисел.*/
         return ("\n________________________________\n\n2. Написать метод(методы) для нахождения наибольшего" +
                 "общего делителя четырех натуральных чисел.\n\nОтвет:\nПервое число: " + a + "\nВторое число: " + b +
@@ -1406,10 +1406,10 @@ public class TaskArray {
         /*3. Вычислить площадь правильного шестиугольника со стороной а, используя метод вычисления площади треугольника.*/
         return ("\n________________________________\n\n2. Написать метод(методы) для нахождения наибольшего" +
                 "общего делителя четырех натуральных чисел.\n\nОтвет:\nСторона шестиугольника равна: " + a +
-                "\nПлощадь шестиугольника: " + Math.round(6 * EquilateralTriangle(a) * 100.0) / 100.0);
+                "\nПлощадь шестиугольника: " + Math.round(6 * equilateralTriangle(a) * 100.0) / 100.0);
     }
 
-    public static String Array4_4() {
+    public static String array4_4() {
         /*4. На плоскости заданы своими координатами n точек. Написать метод(методы), определяющие, между какими из
         пар точек самое большое расстояние. Указание. Координаты точек занести в массив.*/
         Random myRandom = new Random();
@@ -1423,15 +1423,15 @@ public class TaskArray {
                 //заполнение координат точек случайными целыми значениями от 0 до 100
                 arrayPoints[i][j] = myRandom.nextInt(101);
             }
-        maxDistance = DistanceAB(arrayPoints[0], arrayPoints[1]);// максимальное расстояние равно расстоянию между 1 и 2 точкой
+        maxDistance = distanceAB(arrayPoints[0], arrayPoints[1]);// максимальное расстояние равно расстоянию между 1 и 2 точкой
         maxA = 1; //номер первой точки, по которой найдено максимальное расстояние равен 1
         maxB = 2; //номер второй точки, по которой найдено максимальное расстояние, равен 2
         if (N > 2) { //если количество точек больше 2
             for (int i = 0; i < N - 1; i++) {
                 for (int j = i + 1; j < N; j++)
                     //поиск максимального расстояния между точками и их номеров
-                    if (maxDistance < DistanceAB(arrayPoints[i], arrayPoints[j])) {
-                        maxDistance = DistanceAB(arrayPoints[i], arrayPoints[j]);
+                    if (maxDistance < distanceAB(arrayPoints[i], arrayPoints[j])) {
+                        maxDistance = distanceAB(arrayPoints[i], arrayPoints[j]);
                         maxA = i + 1;
                         maxB = j + 1;
                     }
@@ -1439,14 +1439,14 @@ public class TaskArray {
         }
         return ("\n________________________________\n\n4. На плоскости заданы своими координатами n точек." +
                 "\nНаписать метод(методы), определяющие, между какими из\nпар точек самое большое расстояние." +
-                "\n\nОтвет:\nКоличество точек: " + N + "\nМассив координат точек: " + ArrayOutputI(N, 2, arrayPoints) +
+                "\n\nОтвет:\nКоличество точек: " + N + "\nМассив координат точек: " + arrayOutputI(N, 2, arrayPoints) +
                 "\nМаксимальное расстояние составило " + Math.round(maxDistance * 10.0) / 10.0 +
                 " между точкой под номером " + (maxA) + " с координатами (" + arrayPoints[maxA - 1][0] + ":" +
                 arrayPoints[maxA - 1][1] + ") и точкой под номером " + (maxB) + " с координатами (" +
                 arrayPoints[maxB - 1][0] + ":" + arrayPoints[maxB - 1][1] + ")");
     }
 
-    public static String Array4_5(int N) {
+    public static String array4_5(int N) {
         /*5. Составить программу, которая в массиве A[N] находит второе по величине число.*/
         Random myRandom = new Random();
         int[] array = new int[N];
@@ -1457,11 +1457,11 @@ public class TaskArray {
 
         return ("\n________________________________\n\n5. Составить программу, которая в массиве A[N] \nнаходит второе" +
                 " по величине число\n\nОтвет:\nКоличество элементов массива: " + N + "\nМассив:" + Arrays.toString(array) +
-                SearchSecondMax(array, N));
+                searchSecondMax(array, N));
 
     }
 
-    public static String Array4_6(int a, int b, int c) {
+    public static String array4_6(int a, int b, int c) {
         /*6. Написать метод(методы), проверяющий, являются ли данные три числа взаимно простыми.*/
         int gcd = GCD(c, GCD(a, b)); //поиск НОД для чисел a, b, c
         if (gcd == 1) {//если НОД 3-х чисел равен единице
@@ -1477,12 +1477,12 @@ public class TaskArray {
         }
     }
 
-    public static String Array4_7() {
+    public static String array4_7() {
         /*7. Написать метод(методы) для вычисления суммы факториалов всех нечетных чисел от 1 до 9.*/
         int sumFactorial = 0;//сумма факториалов нечетных чисел от 0 до 9
         for (int i = 1; i <= 9; i++) {
             if (i % 2 != 0) { //если i нечетное
-                sumFactorial += Factorial(i); //определяем факториал и считаем сумму
+                sumFactorial += factorial(i); //определяем факториал и считаем сумму
             }
         }
         return ("\n________________________________\n\n7. Написать метод(методы) для вычисления суммы факториалов" +
@@ -1490,7 +1490,7 @@ public class TaskArray {
                 sumFactorial);
     }
 
-    public static String Array4_8() {
+    public static String array4_8() {
         /*8. Задан массив D. Определить следующие суммы: D[1] + D[2] + D[3]; D[3] + D[4] + D[5]; D[4] +D[5] +D[6].*/
         double[] array = new double[6];
         for (int i = 0; i < 6; i++) {
@@ -1498,28 +1498,28 @@ public class TaskArray {
         }
         return ("\n________________________________\n\n8. Задан массив D. Определить следующие суммы: D[1] + D[2] + D[3]; " +
                 "\nD[3] + D[4] + D[5]; D[4] +D[5] +D[6].\n\nОтвет:\nМассив: " +
-                Arrays.toString(array) + "\nСумма 1,2,3 элемента: " + Math.round(SumArray(1, 3, array) * 10.0) / 10.0 +
-                "\nСумма 3,4,5 элемента: " + Math.round(SumArray(3, 5, array) * 10.0) / 10.0 + "\nСумма 4,5,6 элемента: "
-                + Math.round(SumArray(4, 6, array) * 10.0) / 10.0);
+                Arrays.toString(array) + "\nСумма 1,2,3 элемента: " + Math.round(sumArray(1, 3, array) * 10.0) / 10.0 +
+                "\nСумма 3,4,5 элемента: " + Math.round(sumArray(3, 5, array) * 10.0) / 10.0 + "\nСумма 4,5,6 элемента: "
+                + Math.round(sumArray(4, 6, array) * 10.0) / 10.0);
     }
 
 
-    public static String Array4_9(double x, double y, double z, double w) {
+    public static String array4_9(double x, double y, double z, double w) {
         /*9. Даны числа X, Y, Z, Т — длины сторон четырехугольника. Написать метод(методы) вычисления его площади,
         если угол между сторонами длиной X и Y — прямой.*/
         return ("\n________________________________\n\n9. Даны числа X, Y, Z, Т — длины сторон четырехугольника." +
                 "\nНаписать метод(методы) вычисления его площади,\nесли угол между сторонами длиной X и Y— прямой." +
                 "\n\nОтвет:\nСтороны прямоугольника: " + x + " " + y + " " + z + " " + w + " \nПлощадь: " +
-                Math.round((SquareRightTriangle(x, y) + SquareTriangle(Math.pow((x * x + y * y), 0.5), z, w)) * 10.0) / 10.0);
+                Math.round((squareRightTriangle(x, y) + squareTriangle(Math.pow((x * x + y * y), 0.5), z, w)) * 10.0) / 10.0);
 
     }
 
-    public static String Array4_10(int N) {
+    public static String array4_10(int N) {
         /*10. Дано натуральное число N. Написать метод(методы) для формирования массива,
         элементами которого являются цифры числа N.*/
         if (N > 0) {
             //Получение строкового массива, элементы которого представляют собой цифра натурального числа N
-            String[] result = Task.NumberComposition(N).split(" ");
+            String[] result = Task.numberComposition(N).split(" ");
             return ("\n________________________________\n\n10. Дано натуральное число N. Написать метод(методы) для формирования " +
                     "\nмассива элементами которого являются цифры числа N." + "\n\nОтвет:\nИсходное число: "
                     + N + " \nМассив: " + Arrays.toString(result));
@@ -1530,15 +1530,15 @@ public class TaskArray {
         }
     }
 
-    public static String Array4_11(int N, int M) {
+    public static String array4_11(int N, int M) {
         /*11. Написать метод(методы), определяющий, в каком из данных двух чисел больше цифр.*/
         if (N < 0 || M < 0) {
             return ("\n________________________________\n\n11. Написать метод(методы), определяющий, в каком\n из данных " +
                     "двух чисел больше цифр." + "\n\nОтвет:\nN и M должны быть положительными.");
         } else {
-            String[] arrayN = Task.NumberComposition(N).split(" ");
+            String[] arrayN = Task.numberComposition(N).split(" ");
             //получение строкового массива, элементы которого представляют собой цифры натурального числа M
-            String[] arrayM = Task.NumberComposition(M).split(" ");
+            String[] arrayM = Task.numberComposition(M).split(" ");
             if (arrayN.length > arrayM.length) {
                 return ("\n________________________________\n\n11. Написать метод(методы), определяющий, в каком\nиз данных " +
                         "двух чисел больше цифр." + "\n\nОтвет:\nПервое число: " + N + "\nДлина первого числа: " + arrayN.length
@@ -1551,14 +1551,14 @@ public class TaskArray {
         }
     }
 
-    public static String Array4_12(int K, int N) {
+    public static String array4_12(int K, int N) {
         /*12. Даны натуральные числа К и N. Написать метод(методы) формирования массива А, элементами которого являются
         числа, сумма цифр которых равна К и которые не большее N.*/
         if (K > 0 && N > 0) {
             int number = 0;//для поиска чисел, удовлетворяющих условию задачи
             StringBuilder result = new StringBuilder();//строка из чисел, которые удовлетворяют поиску
             while (number <= N) {
-                if (NumberSum(number) == K) {//проверка равенства суммы цифр числа и K
+                if (numberSum(number) == K) {//проверка равенства суммы цифр числа и K
                     result.append(number).append(" ");//формирование итоговой строки
                 }
                 number++;
@@ -1574,14 +1574,14 @@ public class TaskArray {
         }
     }
 
-    public static String Array4_13(int N) {
+    public static String array4_13(int N) {
         /*13. Два простых числа называются «близнецами», если они отличаются друг от друга на 2 (например, 41 и 43).
         Найти и напечатать все пары «близнецов» из отрезка [n,2n], где n - заданное натуральное число больше 2. Для
         решения задачи использовать декомпозицию.*/
         if (N > 2) {
             StringBuilder result = new StringBuilder();
             for (int i = N; i <= 2 * N - 2; i++) {
-                if (PrimeNumber(i) && PrimeNumber(i + 2)) {//проверка, являются ли числа простыми
+                if (primeNumber(i) && primeNumber(i + 2)) {//проверка, являются ли числа простыми
                     result.append("(").append(i).append(":").append(i + 2).append(") ");//запись пар близнецов
                 }
             }
@@ -1595,13 +1595,13 @@ public class TaskArray {
         }
     }
 
-    public static String Array4_14(int K) {
+    public static String array4_14(int K) {
         /*14. Натуральное число, в записи которого n цифр, называется числом Армстронга, если сумма его цифр, возведенная
          в степень n, равна самому числу. Найти все числа Армстронга от 1 до K. Для решения задачи использовать декомпозицию*/
         if (K > 0) {
             StringBuilder result = new StringBuilder();
             for (int i = 1; i <= K; i++) {
-                if (ArmstrongNumber(i)) {
+                if (armstrongNumber(i)) {
                     result.append(i).append("; ");//если число является числом Армстронга, записываем в результирующую строку
                 }
             }
@@ -1613,7 +1613,7 @@ public class TaskArray {
         }
     }
 
-    public static String Array4_15(int n) {
+    public static String array4_15(int n) {
         /*15. Найти все натуральные n-значные числа, цифры в которых образуют строго возрастающую последовательность
         (например, 1234, 5789). Для решения задачи использовать декомпозицию.*/
         if (n >= 2) {
@@ -1629,7 +1629,7 @@ public class TaskArray {
                 }
             }
             for (int i = Integer.parseInt(minNumber.toString()); i <= Integer.parseInt(maxNumber.toString()); i++) {
-                if (IncreasingSequence(i)) {
+                if (increasingSequence(i)) {
                     result.append(i).append("; ");//заполнение результирующей строки числами, которые удовлетворяют условию
                 }
             }
@@ -1642,7 +1642,7 @@ public class TaskArray {
         }
     }
 
-    public static String Array4_16(int n) {
+    public static String array4_16(int n) {
         /*16. Написать программу, определяющую сумму n - значных чисел, содержащих только нечетные цифры. Определить также,
          сколько четных цифр в найденной сумме. Для решения задачи использовать декомпозицию. */
         if (n >= 2) {
@@ -1658,10 +1658,10 @@ public class TaskArray {
                 }
             }
             for (int i = Integer.parseInt(minNumber.toString()); i <= Integer.parseInt(maxNumber.toString()); i++) {
-                if (OddNumbers(i)) {//если число состоит из нечетных чисел
+                if (oddNumbers(i)) {//если число состоит из нечетных чисел
                     //заполнение результирующей строки числами, которые удовлетворяют условию
-                    result.append("число ").append(i).append("; сумма цифр =  ").append(NumberSum(i)).
-                            append("; количество четных цифр в сумме: ").append(CountEven(NumberSum(i))).append("\n");
+                    result.append("число ").append(i).append("; сумма цифр =  ").append(numberSum(i)).
+                            append("; количество четных цифр в сумме: ").append(countEven(numberSum(i))).append("\n");
                 }
             }
             return ("\n________________________________\n\n16. Написать программу, определяющую сумму n - значных чисел, " +
@@ -1674,14 +1674,14 @@ public class TaskArray {
         }
     }
 
-    public static String Array4_17(int n) {
+    public static String array4_17(int n) {
         /*17. Из заданного числа вычли сумму его цифр. Из результата вновь вычли сумму его цифр и т.д.
         Сколько таких действий надо произвести, чтобы получился нуль? Для решения задачи использовать декомпозицию.*/
         if (n > 0) {
             int m = n;
             int count = 0;
             while (m != 0) {//определение количества вычитаний
-                m -= NumberSum(m);
+                m -= numberSum(m);
                 count++;
             }
             return ("\n________________________________\n\n17. Из заданного числа вычли сумму его цифр. " +
@@ -1697,110 +1697,110 @@ public class TaskArray {
     public static void main(String[] args) {
         String result;
         System.out.println("Одномерные массивы");
-        result = Array1_1(125, 7);
+        result = array1_1(125, 7);
         System.out.println(result);
-        result = Array1_2(20, 25);
+        result = array1_2(20, 25);
         System.out.println(result);
-        result = Array1_3(30);
+        result = array1_3(30);
         System.out.println(result);
-        result = Array1_4(30);
+        result = array1_4(30);
         System.out.println(result);
-        result = Array1_5(30);
+        result = array1_5(30);
         System.out.println(result);
-        result = Array1_6(30);
+        result = array1_6(30);
         System.out.println(result);
-        result = Array1_7(30);
+        result = array1_7(30);
         System.out.println(result);
-        result = Array1_8(100);
+        result = array1_8(100);
         System.out.println(result);
-        result = Array1_9(100);
+        result = array1_9(100);
         System.out.println(result);
-        result = Array1_10(30);
+        result = array1_10(30);
         System.out.println(result);
         System.out.println("Массивы массивов");
-        result = Array2_1(5, 10);
+        result = array2_1(5, 10);
         System.out.println(result);
-        result = Array2_2(10);
+        result = array2_2(10);
         System.out.println(result);
-        result = Array2_3(10, 5);
+        result = array2_3(10, 5);
         System.out.println(result);
-        result = Array2_4(10);
+        result = array2_4(10);
         System.out.println(result);
-        result = Array2_5(20);
+        result = array2_5(20);
         System.out.println(result);
-        result = Array2_6(20);
+        result = array2_6(20);
         System.out.println(result);
-        result = Array2_7(7);
+        result = array2_7(7);
         System.out.println(result);
-        result = Array2_8(10, 8);
+        result = array2_8(10, 8);
         System.out.println(result);
-        result = Array2_9(10, 12);
+        result = array2_9(10, 12);
         System.out.println(result);
-        result = Array2_10(10);
+        result = array2_10(10);
         System.out.println(result);
-        result = Array2_11();
+        result = array2_11();
         System.out.println(result);
-        result = Array2_12(10, 11);
+        result = array2_12(10, 11);
         System.out.println(result);
-        result = Array2_13(10, 11);
+        result = array2_13(10, 11);
         System.out.println(result);
-        result = Array2_14(10, 8);
+        result = array2_14(10, 8);
         System.out.println(result);
-        result = Array2_15(10, 12);
+        result = array2_15(10, 12);
         System.out.println(result);
-        result = Array2_16(18);
+        result = array2_16(18);
         System.out.println(result);
         System.out.println("Одномерные массивы. Сортировки");
-        result = Array3_1();
+        result = array3_1();
         System.out.println(result);
-        result = Array3_2();
+        result = array3_2();
         System.out.println(result);
-        result = Array3_3();
+        result = array3_3();
         System.out.println(result);
-        result = Array3_4();
+        result = array3_4();
         System.out.println(result);
-        result = Array3_5();
+        result = array3_5();
         System.out.println(result);
-        result = Array3_6(20);
+        result = array3_6(20);
         System.out.println(result);
-        result = Array3_7();
+        result = array3_7();
         System.out.println(result);
-        result = Array3_8(5);
+        result = array3_8(5);
         System.out.println(result);
         System.out.println("Декомпозиция с использованием методов (подпрограммы)");
-        result = Array4_1(27, 9);
+        result = array4_1(27, 9);
         System.out.println(result);
-        result = Array4_2(27, 9, 3, 60);
+        result = array4_2(27, 9, 3, 60);
         System.out.println(result);
         result = Array4_3(15);
         System.out.println(result);
-        result = Array4_4();
+        result = array4_4();
         System.out.println(result);
-        result = Array4_5(40);
+        result = array4_5(40);
         System.out.println(result);
-        result = Array4_6(3, 9, 27);
+        result = array4_6(3, 9, 27);
         System.out.println(result);
-        result = Array4_7();
+        result = array4_7();
         System.out.println(result);
-        result = Array4_8();
+        result = array4_8();
         System.out.println(result);
-        result = Array4_9(5, 7, 13, 9);
+        result = array4_9(5, 7, 13, 9);
         System.out.println(result);
-        result = Array4_10(234598674);
+        result = array4_10(234598674);
         System.out.println(result);
-        result = Array4_11(5643, 8765490);
+        result = array4_11(5643, 8765490);
         System.out.println(result);
-        result = Array4_12(10, 1500);
+        result = array4_12(10, 1500);
         System.out.println(result);
-        result = Array4_13(100);
+        result = array4_13(100);
         System.out.println(result);
-        result = Array4_14(10000);
+        result = array4_14(10000);
         System.out.println(result);
-        result = Array4_15(5);
+        result = array4_15(5);
         System.out.println(result);
-        result = Array4_16(2);
+        result = array4_16(2);
         System.out.println(result);
-        result = Array4_17(81);
+        result = array4_17(81);
         System.out.println(result);
     }
 }

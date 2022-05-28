@@ -7,7 +7,7 @@ import static java.lang.String.valueOf;
 
 
 public class TaskString {
-    public static StringBuilder ParagraphSorting(String text) {//сортировка абзацев в тесте по количеству предложений
+    public static StringBuilder paragraphSorting(String text) {//сортировка абзацев в тесте по количеству предложений
         int count = 0;
         int temp;
         String tempS;
@@ -42,7 +42,7 @@ public class TaskString {
         return result;
     }
 
-    public static StringBuilder WordSortingChar(String text, String symbol) {//сортировка слов по количеству вхождений символа
+    public static StringBuilder wordSortingChar(String text, String symbol) {//сортировка слов по количеству вхождений символа
         StringBuilder result = new StringBuilder();
         String tempS;
         int temp;
@@ -87,7 +87,7 @@ public class TaskString {
         return result;
     }
 
-    public static StringBuilder WordSorting(String text) {//сортировка слов по длине в предложении
+    public static StringBuilder wordSorting(String text) {//сортировка слов по длине в предложении
         StringBuilder result = new StringBuilder();
         String temp;
         Pattern sentence = Pattern.compile("[^.?!]+([.?!]+\\n*)");//регулярное выражение: предложение
@@ -112,7 +112,7 @@ public class TaskString {
         return result;
     }
 
-    public static String Task1_1() {
+    public static String task1_1() {
         //1. Дан массив названий переменных в camelCase. Преобразовать названия в snake_case.
         String[] variables = {"maxVariable", "minVariable", "countVariable", "arrayVariable", "sumVariable"};
         StringBuilder result = new StringBuilder();//для записи результата
@@ -133,7 +133,7 @@ public class TaskString {
                 "\nРезультат: " + result;
     }
 
-    public static String Task1_2() {
+    public static String task1_2() {
         //2. Замените в строке все вхождения 'word' на 'letter'.
         String text = "Messages that contain the word or name you specified appear with the" +
                 " search text highlighted in the results. Display the word Facebook in the same font size " +
@@ -159,7 +159,7 @@ public class TaskString {
     }
 
 
-    public static String Task1_3() {
+    public static String task1_3() {
         //3. В строке найти количество цифр.
         String text = "2, 4, 6, 8, 10, 12, 14, 16, 18, 20\nOur legs, our arms, our hands, our feet\n" +
                 "We count in pairs of two.\n2, 4, 6, 8, 10, 12, 14, 16, 18, 20\nOur eyes, our ears, our socks, our shoes," +
@@ -174,7 +174,7 @@ public class TaskString {
                 text + "\n\nКоличество цифр в тексте: " + count;
     }
 
-    public static String Task1_4() {
+    public static String task1_4() {
         //4. В строке найти количество чисел.
         String text = "2, 4, 6, 8, 10, 12, 14, 16, 18, 20\nOur legs, our arms, our hands, our feet\n" +
                 "We count in pairs of two.\n2, 4, 6, 8, 10, 12, 14, 16, 18, 20\nOur eyes, our ears, our socks, our shoes," +
@@ -189,7 +189,7 @@ public class TaskString {
                 text + "\n\nКоличество чисел в тексте: " + count;
     }
 
-    public static String Task1_5() {
+    public static String task1_5() {
         //5. Удалить в строке все лишние пробелы, то есть серии подряд идущих пробелов заменить на одиночные пробелы.
         //Крайние пробелы в строке удалить.
         String text = "          Messages      that     contain the word or name you specified appear with the" +
@@ -210,7 +210,7 @@ public class TaskString {
                 "\nИсходная строка:\n" + text + "\nРезультат:\n" + result;
     }
 
-    public static String Task2_1() {
+    public static String task2_1() {
         //1. Дан текст (строка). Найдите наибольшее количество подряд идущих пробелов в нем.
         String text = "Messages      that     contain the word or name you specified appear with the" +
                 " search text highlighted in the results.       Display the word   Facebook in the same font size " +
@@ -234,7 +234,7 @@ public class TaskString {
                 "идущих пробелов: " + max;
     }
 
-    public static String Task2_2() {
+    public static String task2_2() {
         //2. В строке вставить после каждого символа 'a' символ 'b'.
         StringBuilder text = new StringBuilder("Messages that contain the word or name you specified appear with the" +
                 " search text highlighted in the results. Display the word Facebook in the same font size " +
@@ -251,7 +251,7 @@ public class TaskString {
                 textNew;
     }
 
-    public static String Task2_3(String word) {
+    public static String task2_3(String word) {
         //3. Проверить, является ли заданное слово палиндромом.
         if (new StringBuilder(word).reverse().toString().equalsIgnoreCase(word)) {//проверка является ли слово палиндромом
             return "\n________________________________\n\n3. Проверить, является ли заданное слово палиндромом."
@@ -262,7 +262,7 @@ public class TaskString {
         }
     }
 
-    public static String Task2_4() {
+    public static String task2_4() {
         //4. С помощью функции копирования и операции конкатенации составить из частей слова “информатика” слово “торт”.
         String word = "информатика";
         String wordNew;
@@ -272,7 +272,7 @@ public class TaskString {
                 "\nПолученное слово: " + wordNew;
     }
 
-    public static String Task2_5() {
+    public static String task2_5() {
         //5. Подсчитать, сколько раз среди символов заданной строки встречается буква “а”.
         StringBuilder text = new StringBuilder("Messages that contain the word or name you specified appear with the" +
                 " search text highlighted in the results. Display the word Facebook in the same font size " +
@@ -287,7 +287,7 @@ public class TaskString {
                 "встречается буква “а”." + "\n\nОтвет:" + "\nИсходный текст:\n" + text + "\nКоличество букв a: " + count;
     }
 
-    public static String Task2_6() {
+    public static String task2_6() {
         //6. Из заданной строки получить новую, повторив каждый символ дважды.
         StringBuilder text = new StringBuilder("There are different kinds of animals on our planet, and all of them are" +
                 " very important for it.");
@@ -300,7 +300,7 @@ public class TaskString {
                 + "\n\nОтвет:" + "\nИсходная строка:\n" + text + "\nНовая строка:\n" + textNew;
     }
 
-    public static String Task2_7() {
+    public static String task2_7() {
         //7. Вводится строка. Требуется удалить из нее повторяющиеся символы и все пробелы.
         StringBuilder text = new StringBuilder("There are different kinds of animals on our planet, and all of them are" +
                 " very important for it.");
@@ -315,7 +315,7 @@ public class TaskString {
                 "и все пробелы." + "\n\nОтвет:" + "\nИсходная строка:\n" + text + "\nНовая строка:\n" + textNew;
     }
 
-    public static String Task2_8() {
+    public static String task2_8() {
         //8. Вводится строка слов, разделенных пробелами. Найти самое длинное слово и вывести его на экран.
         // Случай, когда самых длинных слов может быть несколько, не обрабатывать.
         String text = "There are different kinds of animals on our planet, and all of them are" +
@@ -334,7 +334,7 @@ public class TaskString {
                 maxWord + "\nКоличество символов в самом длинном слове: " + maxLength;
     }
 
-    public static String Task2_9() {
+    public static String task2_9() {
         //9. Посчитать количество строчных (маленьких) и прописных (больших) букв в веденной строке.
         // Учитывать только английские буквы.
         String text = "There are different kinds of animals on our planet, and all of them are" +
@@ -356,7 +356,7 @@ public class TaskString {
                 + countUpperCase;
     }
 
-    public static String Task2_10() {
+    public static String task2_10() {
         //10. Строка X состоит из нескольких предложений, каждое из которых кончается точкой, восклицательным или
         //вопросительным знаком. Определить количество предложений в строке X.
         String text = "Messages that contain the word or name you specified appear with the" +
@@ -374,7 +374,7 @@ public class TaskString {
                 "\n\nОтвет:" + "\nИсходная строка:\n" + text + "\nКоличество предложений в строке: " + countSentence;
     }
 
-    public static String Task3_1() {
+    public static String task3_1() {
         /*1. Создать приложение, разбирающее текст (текст хранится в строке) и позволяющее выполнять с текстом три различных
         операции: отсортировать абзацы по количеству предложений; в каждом предложении отсортировать слова по длине;
         отсортировать лексемы в предложении по убыванию количества вхождений заданного символа, а в случае равенства
@@ -393,12 +393,12 @@ public class TaskString {
                 "в каждом предложении отсортировать слова по длине;\nотсортировать лексемы в предложении по убыванию\n" +
                 "количества вхождений заданного символа, а в случае равенства – по алфавиту.\n\nОтвет:" +
                 "\nИсходная строка:\n\n" + text + "\n\n1. Сортировка абзацев по количеству предложений: \n"
-                + ParagraphSorting(text) + "\n\n2. Сортировка слов в предложениях по длине: \n\n" + WordSorting(text) +
+                + paragraphSorting(text) + "\n\n2. Сортировка слов в предложениях по длине: \n\n" + wordSorting(text) +
                 "\n\n3. Сортировка слов в предложениях по количеству вхождений заданного символа, в случае равенства " +
-                "вхождений символа - по алфавиту : \n\n" + WordSortingChar(text, "i");
+                "вхождений символа - по алфавиту : \n\n" + wordSortingChar(text, "i");
     }
 
-    public static String Task3_2() {
+    public static String task3_2() {
         /*2. Дана строка, содержащая текст (xml-документ). Напишите анализатор, позволяющий последовательно возвращать
         содержимое узлов xml-документа и его тип*/
         String text = "<notes>\n" +
@@ -437,41 +437,41 @@ public class TaskString {
     public static void main(String[] args) {
         String result;
         System.out.println("\nРабота со строкой как с массивом символов");
-        result = Task1_1();
+        result = task1_1();
         System.out.println(result);
-        result = Task1_2();
+        result = task1_2();
         System.out.println(result);
-        result = Task1_3();
+        result = task1_3();
         System.out.println(result);
-        result = Task1_4();
+        result = task1_4();
         System.out.println(result);
-        result = Task1_5();
+        result = task1_5();
         System.out.println(result);
         System.out.println("\nРабота со строкой как с объектом типа String или StringBuilder");
-        result = Task2_1();
+        result = task2_1();
         System.out.println(result);
-        result = Task2_2();
+        result = task2_2();
         System.out.println(result);
-        result = Task2_3("Шалаш");
+        result = task2_3("Шалаш");
         System.out.println(result);
-        result = Task2_4();
+        result = task2_4();
         System.out.println(result);
-        result = Task2_5();
+        result = task2_5();
         System.out.println(result);
-        result = Task2_6();
+        result = task2_6();
         System.out.println(result);
-        result = Task2_7();
+        result = task2_7();
         System.out.println(result);
-        result = Task2_8();
+        result = task2_8();
         System.out.println(result);
-        result = Task2_9();
+        result = task2_9();
         System.out.println(result);
-        result = Task2_10();
+        result = task2_10();
         System.out.println(result);
         System.out.println("\nРабота с регулярными выражениями (Pattern, Matcher)");
-        result = Task3_1();
+        result = task3_1();
         System.out.println(result);
-        result = Task3_2();
+        result = task3_2();
         System.out.println(result);
     }
 }
